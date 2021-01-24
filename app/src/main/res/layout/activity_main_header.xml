@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200sp"
+    android:orientation="vertical"
+    android:background="@drawable/header_gradient"
+    android:gravity="bottom"
+    android:padding="20sp">
+
+    <ImageView
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_gravity="end"
+        android:src="@drawable/round_logo"/>
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B.Sc CS"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:id="@+id/profileDno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Be The Professionalist"
+        android:textSize="15sp"/>
+
+
+
+</LinearLayout>
