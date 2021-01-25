@@ -214,7 +214,6 @@
                 android:hint="@string/date_of_birth"
                 android:inputType="date"
                 android:padding="10sp"
-
                 android:textColor="#FFFFFF"
                 android:textColorHint="#D6D6D6"
                 app:layout_constraintBottom_toBottomOf="parent"
