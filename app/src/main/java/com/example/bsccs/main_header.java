@@ -13,6 +13,8 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.util.Objects;
+
 public class main_header extends AppCompatActivity {
     TextView fullName, dno;
     FirebaseAuth fAuth;
@@ -30,13 +32,14 @@ public class main_header extends AppCompatActivity {
             fAuth = FirebaseAuth.getInstance();
             fStore = FirebaseFirestore.getInstance();
 
-            userId = fAuth.getCurrentUser().getUid();
+            userId = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
 
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                    dno.setText(documentSnapshot.getString("dno"));
+                assert documentSnapshot != null;
+                dno.setText(documentSnapshot.getString("dno"));
                     fullName.setText(documentSnapshot.getString("fname"));
             }
         });

@@ -103,7 +103,6 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:onClick="syllabus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10sp"
@@ -113,6 +112,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/item_bg"
                         android:gravity="center"
+                        android:onClick="syllabus"
                         android:orientation="vertical"
                         app:cardCornerRadius="8sp"
                         app:cardElevation="8sp">
@@ -157,6 +157,7 @@
                     android:weightSum="2">
 
                     <LinearLayout
+                        android:id="@+id/folder"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10sp"
@@ -167,6 +168,7 @@
                         android:background="@drawable/item_bg"
                         android:gravity="center"
                         android:orientation="vertical"
+                        android:onClick="folder"
                         app:cardCornerRadius="8sp"
                         app:cardElevation="8sp">
 
@@ -310,6 +312,7 @@
                         android:background="@drawable/item_bg"
                         android:gravity="center"
                         android:orientation="vertical"
+                        android:onClick="erp"
                         app:cardCornerRadius="8sp"
                         app:cardElevation="8sp">
 
@@ -322,7 +325,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/mail" />
+                            app:srcCompat="@drawable/sjc" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -330,9 +333,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="20sp"
-                            android:text="Information"
-                            android:textSize="25sp"
+                            android:text="SJC ERP"
+                            android:textSize="22sp"
                             android:textStyle="bold"
+                            android:textColor="#2B2B2B"
+                            android:shadowColor="#9BA5A6"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="2"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/imageView2" />

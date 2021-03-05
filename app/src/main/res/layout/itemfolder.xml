@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:elevation="10dp"
+    tools:targetApi="lollipop" >
+
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="#fff"
+        android:background="@drawable/item_bg"
+        tools:targetApi="p">
+
+        <LinearLayout
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:background="@drawable/border"
+            android:fadingEdge="horizontal|vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_margin="10sp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/pdf_rows" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:shadowColor="#71C0F1"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="item name"
+                android:textColor="#36A9EF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="30sp"
+                android:shadowRadius="2"
+                android:shadowColor="#000"
+                android:shadowDx="2"
+                android:shadowDy="2" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample name"
+                android:textSize="30sp"
+                android:shadowRadius="2"
+                android:shadowColor="#000"
+                android:shadowDx="2"
+                android:shadowDy="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="number:"
+                android:textSize="30sp"
+                android:shadowRadius="2"
+                android:shadowColor="#000"
+                android:shadowDx="2"
+                android:shadowDy="2"/>
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="no"
+                android:textSize="30sp"
+                android:shadowRadius="2"
+                android:shadowColor="#000"
+                android:shadowDx="2"
+                android:shadowDy="2"/>
+
+        </LinearLayout> -->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

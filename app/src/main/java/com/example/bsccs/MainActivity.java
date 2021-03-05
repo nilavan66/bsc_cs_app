@@ -1,5 +1,6 @@
 package com.example.bsccs;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -63,7 +65,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            new AlertDialog.Builder(this)
+                    .setTitle("Really Exit?")
+                    .setMessage("Are you sure you want to exit?")
+                    .setNegativeButton(android.R.string.no, null)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            MainActivity.super.onBackPressed();
+                        }
+                    }).create().show();
+
         }
     }
 
@@ -82,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.profile:
                 Intent intent = new Intent(MainActivity.this, My_profile.class);
                 startActivity(intent);
+                finish();
         }
  
 
@@ -92,15 +105,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void timetable(View view) {
         Intent intent = new Intent(MainActivity.this, Timetable.class);
         startActivity(intent);
+        finish();
     }
 
     public void pdf(View view) {
         Intent intent = new Intent(MainActivity.this, Pdf.class);
         startActivity(intent);
+        finish();
     }
 
     public void syllabus(View view) {
         Intent intent = new Intent(MainActivity.this, Syllabus.class);
         startActivity(intent);
+        finish();
     }
+
+    public void erp(View view) {
+        Intent intent = new Intent(MainActivity.this, CollegeErp.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void folder(View view) {
+        Intent intent = new Intent(MainActivity.this, Folder.class);
+        startActivity(intent);
+        finish();
+    }
+
+
 }
