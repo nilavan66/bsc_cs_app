@@ -22,9 +22,7 @@ public class MyAdapterFolder extends RecyclerView.Adapter<MyAdapterFolder.MyView
 
         this.mList=mList;
         this.context=context;
-
     }
-
 
     @NonNull
     @Override
@@ -37,7 +35,6 @@ public class MyAdapterFolder extends RecyclerView.Adapter<MyAdapterFolder.MyView
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         final ModelFolder modelFolder = mList.get(position);
         holder.name.setText(modelFolder.getName());
-       // holder.number.setText(model.getFileurl());
 
         holder.link.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,14 +56,13 @@ public class MyAdapterFolder extends RecyclerView.Adapter<MyAdapterFolder.MyView
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name;// number;
+        TextView name;
         LinearLayout link;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            name = itemView.findViewById(R.id.name);
-            //number = itemView.findViewById(R.id.number);
+            name = itemView.findViewById(R.id.msg);
             link = itemView.findViewById(R.id.link);
 
         }

@@ -2,7 +2,6 @@ package com.example.bsccs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
@@ -18,11 +17,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Folder extends AppCompatActivity {
-
+public class Cn extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase db = FirebaseDatabase.getInstance();
-    DatabaseReference root = db.getReference().child("folder");
+    DatabaseReference root = db.getReference().child("cn");
     MyAdapterFolder adapter;
     ArrayList<ModelFolder> list;
 
@@ -30,7 +28,7 @@ public class Folder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_folder);
+        setContentView(R.layout.activity_cn);
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -58,10 +56,10 @@ public class Folder extends AppCompatActivity {
         });
 
     }
-
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), Pdf.class));
         finish();
     }
+
 }

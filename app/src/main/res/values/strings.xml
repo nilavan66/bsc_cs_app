@@ -20,5 +20,33 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="home">Home</string>
+    <string name="subject_3">Subject 3</string>
+    <string name="computer_networks">Computer Networks</string>
+    <string name="operation_research">Operation Research</string>
+    <string name="operating_system">Operating System</string>
+    <string name="item_name">item name</string>
+    <string name="operations_research">Operations Research</string>
+    <string name="timetable">Timetable</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="folder">Folder</string>
+    <string name="pdf">PDF</string>
+    <string name="messages">Messages</string>
+    <string name="sjc_erp">SJC ERP</string>
+    <string name="b_sc_cs">B.Sc CS</string>
+    <string name="be_the_professionalist">Be The Professionalist</string>
+    <string name="name">Name:</string>
+    <string name="your_name">Your Name</string>
+    <string name="register_no">Register No</string>
+    <string name="your_dno">Your dno</string>
+    <string name="your_email">Your Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="your_phone">Your phone</string>
+    <string name="register_no_p">Register No:</string>
+    <string name="email_p">Email:</string>
+    <string name="phone_number_p">Phone Number:</string>
+    <string name="date_of_birth_p">Date of Birth:</string>
+    <string name="change_profile">change Profile</string>
+    <string name="if_there_any_corrections_in_your_profile_nkindly_contact_your_admin">If there any corrections in your profile,\nKindly contact your admin</string>
+    <string name="your_dob">Your dob</string>
 
 </resources>

@@ -1,8 +1,7 @@
 package com.example.bsccs;
 
 public class ModelFolder {
-    String name, fileurl; //number;
-
+    String name, fileurl;
 
     public String getName() {
         return name;
@@ -12,7 +11,5 @@ public class ModelFolder {
         return fileurl;
     }
 
-    //public String getNumber() {
-    // return number;
-    // }
+
 }

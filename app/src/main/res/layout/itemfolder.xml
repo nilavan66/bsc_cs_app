@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="wrap_content"
+    android:minHeight="110dp"
     android:elevation="10dp"
     tools:targetApi="lollipop" >
 
@@ -22,7 +23,7 @@
         <LinearLayout
             android:id="@+id/link"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="5sp"
             android:background="@drawable/border"
             android:fadingEdge="horizontal|vertical"
@@ -36,8 +37,8 @@
                 android:src="@drawable/pdf_rows" />
 
             <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10sp"
@@ -46,10 +47,12 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:text="item name"
+                android:text="@string/item_name"
                 android:textColor="#36A9EF"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp" />
 
         </LinearLayout>
 

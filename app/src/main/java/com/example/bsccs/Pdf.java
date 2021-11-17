@@ -16,12 +16,24 @@ public class Pdf extends AppCompatActivity {
         setContentView(R.layout.activity_pdf);
     }
 
-
-    public void d1(View view) {
-        startActivity(new Intent(getApplicationContext(), Down_one.class));
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
     }
 
-    public void back(View view) {
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+    public void cn(View view) {
+        startActivity(new Intent(getApplicationContext(), Cn.class));
+        finish();
+    }
+
+    public void or(View view) {
+        startActivity(new Intent(getApplicationContext(), Or.class));
+        finish();
+    }
+
+    public void os(View view) {
+        startActivity(new Intent(getApplicationContext(), Os.class));
+        finish();
     }
 }

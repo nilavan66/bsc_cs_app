@@ -1,5 +1,6 @@
 package com.example.bsccs;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ public class ViewPfd extends AppCompatActivity {
 
     WebView pdfview;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

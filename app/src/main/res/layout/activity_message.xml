@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Folder">
+    tools:context=".Message">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,13 +13,13 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/arima_madurai_extrabold"
-        android:shadowColor="#9BA5A6"
+        android:shadowColor="#209DAA"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="@string/folder"
+        android:text="@string/messages"
         android:textAlignment="center"
-        android:textColor="#E53935"
+        android:textColor="#304FFE"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -37,12 +37,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

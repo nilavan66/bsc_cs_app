@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
-    tools:openDrawer="start"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -17,13 +18,11 @@
         app:headerLayout="@layout/activity_main_header"
         app:menu="@menu/nav_menu" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/back_card"
         android:orientation="vertical">
-
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -31,8 +30,6 @@
             android:layout_height="wrap_content"
             android:background="#502177CC"
             android:elevation="6sp"
-            android:outlineAmbientShadowColor="#000000"
-            android:outlineSpotShadowColor="#000000"
             app:navigationIcon="@drawable/ic_menu_black_24dp"
             tools:targetApi="lollipop" />
 
@@ -41,12 +38,11 @@
             android:layout_height="match_parent"
             android:fadeScrollbars="true">
 
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:layout_marginLeft="5sp"
-                android:layout_marginTop="20sp"
                 android:layout_marginRight="5sp"
                 android:orientation="vertical">
 
@@ -54,7 +50,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
                     android:weightSum="2">
 
                     <LinearLayout
@@ -68,23 +67,19 @@
                         android:background="@drawable/item_bg"
                         android:gravity="center"
                         android:onClick="timetable"
-                        android:orientation="vertical"
-                        app:cardCornerRadius="8sp"
-                        app:cardElevation="8sp">
-
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_marginTop="20dp"
+                            android:contentDescription="@string/todo"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/timetable" />
 
                         <TextView
-                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -93,7 +88,7 @@
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="2"
-                            android:text="Timetable"
+                            android:text="@string/timetable"
                             android:textColor="#00bef7"
                             android:textSize="22sp"
                             android:textStyle="bold"
@@ -113,23 +108,19 @@
                         android:background="@drawable/item_bg"
                         android:gravity="center"
                         android:onClick="syllabus"
-                        android:orientation="vertical"
-                        app:cardCornerRadius="8sp"
-                        app:cardElevation="8sp">
-
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_marginTop="20dp"
+                            android:contentDescription="@string/todo"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/material" />
 
                         <TextView
-                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -138,7 +129,7 @@
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="2"
-                            android:text="Syllabus "
+                            android:text="@string/syllabus"
                             android:textColor="#ED4061"
                             android:textSize="22sp"
                             android:textStyle="bold"
@@ -153,6 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="2">
 
@@ -167,24 +159,20 @@
                         android:layout_weight="1"
                         android:background="@drawable/item_bg"
                         android:gravity="center"
-                        android:orientation="vertical"
                         android:onClick="folder"
-                        app:cardCornerRadius="8sp"
-                        app:cardElevation="8sp">
-
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_marginTop="20dp"
+                            android:contentDescription="@string/todo"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/folder2" />
 
                         <TextView
-                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -193,7 +181,7 @@
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="2"
-                            android:text="Folder"
+                            android:text="@string/folder"
                             android:textColor="#DF7F69"
                             android:textSize="22sp"
                             android:textStyle="bold"
@@ -213,23 +201,19 @@
                         android:background="@drawable/item_bg"
                         android:gravity="center"
                         android:onClick="pdf"
-                        android:orientation="vertical"
-                        app:cardCornerRadius="8sp"
-                        app:cardElevation="8sp">
-
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_marginTop="20dp"
+                            android:contentDescription="@string/todo"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/pdf_rows" />
 
                         <TextView
-                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -238,7 +222,7 @@
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="2"
-                            android:text="PDF"
+                            android:text="@string/pdf"
                             android:textColor="#da4a54"
                             android:textSize="22sp"
                             android:textStyle="bold"
@@ -247,13 +231,13 @@
                             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
                     </LinearLayout>
 
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="2">
 
@@ -267,23 +251,20 @@
                         android:layout_weight="1"
                         android:background="@drawable/item_bg"
                         android:gravity="center"
-                        android:orientation="vertical"
-                        app:cardCornerRadius="8sp"
-                        app:cardElevation="8sp">
-
+                        android:onClick="messages"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_marginTop="20dp"
+                            android:contentDescription="@string/todo"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/mail" />
 
                         <TextView
-                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -292,7 +273,7 @@
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="2"
-                            android:text="Messages"
+                            android:text="@string/messages"
                             android:textColor="#526391"
                             android:textSize="22sp"
                             android:textStyle="bold"
@@ -311,41 +292,36 @@
                         android:layout_weight="1"
                         android:background="@drawable/item_bg"
                         android:gravity="center"
-                        android:orientation="vertical"
                         android:onClick="erp"
-                        app:cardCornerRadius="8sp"
-                        app:cardElevation="8sp">
-
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_marginTop="20dp"
+                            android:contentDescription="@string/todo"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/sjc" />
 
                         <TextView
-                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="20sp"
-                            android:text="SJC ERP"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:textColor="#2B2B2B"
                             android:shadowColor="#9BA5A6"
                             android:shadowDx="2"
                             android:shadowDy="2"
                             android:shadowRadius="2"
+                            android:text="@string/sjc_erp"
+                            android:textColor="#2B2B2B"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
                     </LinearLayout>
-
 
                 </LinearLayout>
 
@@ -353,7 +329,6 @@
             </LinearLayout>
 
         </ScrollView>
-
 
     </LinearLayout>
 

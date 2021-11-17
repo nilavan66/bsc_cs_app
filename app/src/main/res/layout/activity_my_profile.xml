@@ -7,7 +7,6 @@
     android:background="@drawable/profile_back"
     tools:context=".My_profile">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,13 +43,12 @@
                 android:id="@+id/profileImage"
                 android:layout_width="150sp"
                 android:layout_height="150sp"
-                android:outlineSpotShadowColor="#ffffff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10sp"
+                android:contentDescription="@string/todo"
                 android:elevation="10sp"
-                android:outlineAmbientShadowColor="@color/colorPrimaryDark"
-                android:src="@drawable/default_profile" />
-
+                android:src="@drawable/default_profile"
+                tools:targetApi="lollipop" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -72,7 +70,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -85,7 +82,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Name:"
+                        android:text="@string/name"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -101,18 +98,16 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Your Name"
+                        android:text="@string/your_name"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -126,7 +121,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Register No:"
+                        android:text="@string/register_no_p"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -142,7 +137,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Your dno"
+                        android:text="@string/your_dno"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -167,7 +162,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Email:"
+                        android:text="@string/email_p"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -183,7 +178,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Your Email"
+                        android:text="@string/your_email"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -208,7 +203,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Phone Number:"
+                        android:text="@string/phone_number_p"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -224,7 +219,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Your phone"
+                        android:text="@string/your_phone"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -249,7 +244,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Date of Birth:"
+                        android:text="@string/date_of_birth_p"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -265,7 +260,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="Your dob"
+                        android:text="@string/your_dob"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -292,7 +287,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="2"
-                        android:text="If there any corrections in your profile,\nKindly contact your admin"
+                        android:text="@string/if_there_any_corrections_in_your_profile_nkindly_contact_your_admin"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="15sp"
@@ -308,30 +303,13 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="20sp"
                     android:background="@drawable/button"
-                    android:elevation="40sp"
                     android:onClick="back"
                     android:shadowColor="#878787"
                     android:shadowDx="2"
                     android:shadowDy="2"
                     android:shadowRadius="3"
-                    android:text="change Profile"
-                    android:textColor="#E3E3E3"/>
-
-                <Button
-                    android:id="@+id/back"
-                    android:layout_width="130sp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20sp"
-                    android:background="@drawable/button"
-                    android:elevation="40sp"
-                    android:onClick="back"
-                    android:shadowColor="#878787"
-                    android:shadowDx="2"
-                    android:shadowDy="2"
-                    android:shadowRadius="3"
-                    android:text="back"
-                    android:textColor="#E3E3E3"/>
+                    android:text="@string/change_profile"
+                    android:textColor="#E3E3E3" />
 
             </LinearLayout>
         </LinearLayout>

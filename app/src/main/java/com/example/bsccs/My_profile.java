@@ -63,7 +63,6 @@ public class My_profile extends AppCompatActivity {
             }
         });
 
-
         userId = fAuth.getCurrentUser().getUid();
 
         final DocumentReference documentReference = fStore.collection("users").document(userId);
@@ -85,13 +84,10 @@ public class My_profile extends AppCompatActivity {
                 Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(openGalleryIntent,1000 );
 
-
             }
         });
 
-
     }
-
 
     @Override
     protected  void onActivityResult(int requestCode, int resultCode, @androidx.annotation.Nullable Intent data)
@@ -101,6 +97,7 @@ public class My_profile extends AppCompatActivity {
         {
             if (resultCode == Activity.RESULT_OK)
             {
+                assert data != null;
                 Uri imageUri = data.getData();
                 //profileImage.setImageURI(imageUri);
 
@@ -130,10 +127,15 @@ public class My_profile extends AppCompatActivity {
                 Toast.makeText(My_profile.this, "Image Not Uploaded", Toast.LENGTH_SHORT);
             }
         });
-
     }
 
     public void back(View view) {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
     }
 }

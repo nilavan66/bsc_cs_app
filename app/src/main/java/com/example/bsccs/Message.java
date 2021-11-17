@@ -2,7 +2,6 @@ package com.example.bsccs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
@@ -18,34 +17,32 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Folder extends AppCompatActivity {
-
+public class Message extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase db = FirebaseDatabase.getInstance();
-    DatabaseReference root = db.getReference().child("folder");
-    MyAdapterFolder adapter;
-    ArrayList<ModelFolder> list;
+    DatabaseReference root = db.getReference().child("Messages");
+    MyAdapterMsg adapter;
+    ArrayList<ModelMsg> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_folder);
+        setContentView(R.layout.activity_message);
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        adapter = new MyAdapterFolder(this, list);
-
+        adapter = new MyAdapterMsg(this, list);
         recyclerView.setAdapter(adapter);
 
         root.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    ModelFolder model = dataSnapshot.getValue(ModelFolder.class);
+                    ModelMsg model = dataSnapshot.getValue(ModelMsg.class);
                     list.add(model);
                 }
                 adapter.notifyDataSetChanged();
@@ -53,10 +50,8 @@ public class Folder extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
     }
 
     @Override

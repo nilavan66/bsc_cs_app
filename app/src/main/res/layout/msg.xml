@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    android:minHeight="110dp"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/item_bg"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="#fff"
+        tools:targetApi="p">
+
+        <LinearLayout
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_margin="5sp"
+            android:background="@drawable/border"
+            android:fadingEdge="horizontal|vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:text="date"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="message"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/name"
+                 android:textSize="30sp"
+                 android:shadowRadius="2"
+                 android:shadowColor="#000"
+                 android:shadowDx="2"
+                 android:shadowDy="2" />
+             <TextView
+                 android:id="@+id/name"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="sample name"
+                 android:textSize="30sp"
+                 android:shadowRadius="2"
+                 android:shadowColor="#000"
+                 android:shadowDx="2"
+                 android:shadowDy="2"/>
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="number:"
+                 android:textSize="30sp"
+                 android:shadowRadius="2"
+                 android:shadowColor="#000"
+                 android:shadowDx="2"
+                 android:shadowDy="2"/>
+             <TextView
+                 android:id="@+id/number"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="no"
+                 android:textSize="30sp"
+                 android:shadowRadius="2"
+                 android:shadowColor="#000"
+                 android:shadowDx="2"
+                 android:shadowDy="2"/>
+
+         </LinearLayout> -->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

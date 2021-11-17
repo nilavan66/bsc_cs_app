@@ -24,7 +24,8 @@
             android:textAlignment="center"
             android:textColor="#da4a54"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -42,7 +43,7 @@
                     android:layout_margin="5sp"
                     android:background="@drawable/border"
                     android:fadingEdge="horizontal|vertical"
-                    android:onClick="d1"
+                    android:onClick="cn"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -60,10 +61,11 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="1"
-                        android:text="Subject 1"
+                        android:text="@string/computer_networks"
                         android:textColor="#36A9EF"
                         android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="10sp" />
 
                 </LinearLayout>
 
@@ -71,6 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
+                    android:onClick="or"
                     android:background="@drawable/border"
                     android:orientation="horizontal">
 
@@ -89,10 +92,11 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="1"
-                        android:text="Subject 2"
+                        android:text="@string/operation_research"
                         android:textColor="#36A9EF"
                         android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="10sp" />
 
                 </LinearLayout>
 
@@ -100,6 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
+                    android:onClick="os"
                     android:background="@drawable/border"
                     android:orientation="horizontal">
 
@@ -107,7 +112,8 @@
                         android:layout_width="60sp"
                         android:layout_height="60sp"
                         android:layout_margin="10sp"
-                        android:src="@drawable/pdf" />
+                        android:src="@drawable/pdf"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -118,14 +124,15 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="1"
-                        android:text="Subject 3"
+                        android:text="@string/operating_system"
                         android:textColor="#36A9EF"
                         android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginStart="10sp" />
 
                 </LinearLayout>
 
-                <LinearLayout
+              <!--  <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
@@ -226,7 +233,7 @@
                     android:shadowDy="2"
                     android:shadowRadius="3"
                     android:text="back"
-                    android:textColor="#E3E3E3" />
+                    android:textColor="#E3E3E3" /> -->
 
             </LinearLayout>
         </ScrollView>

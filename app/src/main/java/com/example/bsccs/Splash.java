@@ -35,14 +35,12 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         fAuth = FirebaseAuth.getInstance();
 
-
-
         //Animation
-
         topanim = AnimationUtils.loadAnimation(this,top_animation);
         bottomanim = AnimationUtils.loadAnimation(this,bottom_animation);
 
         //Hooks
+
         image = findViewById(R.id.imageView);
         title = findViewById(R.id.textView);
         owner = findViewById(R.id.owner);
@@ -59,14 +57,12 @@ public class Splash extends AppCompatActivity {
                 if (fAuth.getCurrentUser() !=null)
                 {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    finish();
                 }
                 else
                 {
                     startActivity(new Intent(getApplicationContext(), Login.class));
                     finish();
                 }
-
             }
         },SPLASH_SCREEN);
     }

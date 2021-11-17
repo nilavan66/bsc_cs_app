@@ -1,5 +1,6 @@
 package com.example.bsccs;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fullName = findViewById(R.id.profileName);
         dno = findViewById(R.id.profileDno);
 
-
+        /*-----------Navigation View-----*/
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
@@ -53,39 +54,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
         navigationView.setNavigationItemSelectedListener(this);
-
-
     }
-
+    
 
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            new AlertDialog.Builder(this)
-                    .setTitle("Really Exit?")
-                    .setMessage("Are you sure you want to exit?")
-                    .setNegativeButton(android.R.string.no, null)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                        public void onClick(DialogInterface arg0, int arg1) {
-                            MainActivity.super.onBackPressed();
-                        }
-                    }).create().show();
-
+            moveTaskToBack(true);
         }
     }
 
     public void logout(MenuItem item) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), Login.class));
-        finish();
     }
 
-
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -97,10 +84,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 finish();
         }
  
-
         return true;
     }
-
 
     public void timetable(View view) {
         Intent intent = new Intent(MainActivity.this, Timetable.class);
@@ -132,5 +117,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         finish();
     }
 
+    public void messages(View view) {
+        Intent intent = new Intent(MainActivity.this, Message.class);
+        startActivity(intent);
+        finish();
+    }
 
 }

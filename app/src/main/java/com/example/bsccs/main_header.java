@@ -1,8 +1,10 @@
 package com.example.bsccs;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -21,7 +23,7 @@ public class main_header extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userId;
 
-
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

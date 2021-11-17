@@ -16,9 +16,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/app_logo_background" />
+        app:srcCompat="@drawable/app_logo_background"
+        tools:ignore="VectorDrawableCompat" />
 
-    <Button
+   <!-- <Button
         android:id="@+id/back"
         android:layout_width="150sp"
         android:layout_height="wrap_content"
@@ -36,6 +37,6 @@
         app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

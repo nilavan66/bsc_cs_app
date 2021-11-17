@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200sp"
     android:orientation="vertical"
@@ -13,22 +11,21 @@
         android:layout_width="80sp"
         android:layout_height="80sp"
         android:layout_gravity="end"
-        android:src="@drawable/round_logo"/>
+        android:src="@drawable/round_logo"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/profileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="B.Sc CS"
+        android:text="@string/b_sc_cs"
         android:textSize="28sp"/>
 
     <TextView
         android:id="@+id/profileDno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Be The Professionalist"
+        android:text="@string/be_the_professionalist"
         android:textSize="15sp"/>
-
-
 
 </LinearLayout>

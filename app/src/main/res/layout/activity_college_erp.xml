@@ -5,26 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CollegeErp">
-    tools:openDrawer="start"
-
-    <!-- <com.google.android.material.navigation.NavigationView
-         android:id="@+id/nav_view"
-         android:layout_width="wrap_content"
-         android:layout_height="match_parent"
-         android:layout_gravity="start"
-         app:headerLayout="@layout/activity_main_header"
-         app:menu="@menu/nav_menu" /> -->
-
-    <!--<androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#502177CC"
-        android:elevation="6sp"
-        android:outlineAmbientShadowColor="#000000"
-        android:outlineSpotShadowColor="#000000"
-        app:navigationIcon="@drawable/ic_menu_black_24dp"
-        tools:targetApi="lollipop" /> -->
 
     <WebView
         android:id="@+id/erp"
